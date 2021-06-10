@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "checkFormat": "yarn prettier --check",
-    "writeFormat": "yarn prettier --write"
+    "writeFormat": "yarn prettier --write",
+    "setupDatabase": "sequelize db:migrate && sequelize db:seed:all",
+    "unsetDatabase": "sequelize db:seed:undo:all && sequelize db:migrate:undo:all"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
