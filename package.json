@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "nodemon ./bin/www | pino-pretty",
     "checkFormat": "yarn prettier --check",
     "writeFormat": "yarn prettier --write",
     "setupDatabase": "sequelize db:migrate && sequelize db:seed:all",
@@ -20,6 +20,9 @@
     "mysql2": "^2.2.5"
   },
   "devDependencies": {
+    "express-list-endpoints": "^5.0.0",
+    "pino": "^6.11.3",
+    "pino-pretty": "^5.0.2",
     "prettier": "2.3.1",
     "sequelize": "^6.6.2",
     "sequelize-cli": "^6.2.0"
