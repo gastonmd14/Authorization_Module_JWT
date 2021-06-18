@@ -7,6 +7,9 @@
 var app = require('../app');
 var debug = require('debug')('authorization-module-jwt:server');
 var http = require('http');
+const endpoints = require('../src/utils/listEndpoints')
+endpoints.list();
+
 
 /**
  * Get port from environment and store in Express.
