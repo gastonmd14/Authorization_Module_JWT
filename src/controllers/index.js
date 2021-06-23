@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const handler = require('../handlers/index')
+const handler = require('../handlers/index');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -22,8 +23,8 @@ router.get('/login', async (req, res, next) => {
   res.send('respond with a resource');
 });
 
-router.get('/register', async (req, res, next) => {
-  const body = {...req.body}
+router.post('/register', async (req, res, next) => {
+  const body = req.body
   try{
     const result = await handler.createOneUser(body);
       if (result) {
