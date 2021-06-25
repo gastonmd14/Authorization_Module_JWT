@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const handler = require('../handlers/index');
+const {emailExist, emailValidate} = require('../controllers/middlewares/userVerification.js');
 
 
 /* GET home page. */
