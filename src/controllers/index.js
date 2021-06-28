@@ -24,7 +24,7 @@ router.get('/login', async (req, res, next) => {
   res.send('respond with a resource');
 });
 
-router.post('/register', async (req, res, next) => {
+router.post('/register', emailExist(), emailValidate, async (req, res, next) => {
   const body = req.body
   try{
     const result = await handler.createOneUser(body);

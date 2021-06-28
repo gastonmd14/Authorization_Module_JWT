@@ -1,6 +1,6 @@
 const repositorie = require('../services/repositories/index');
 
-const findOneUser = async (body) => await repositorie.findOne(body);
+const findOneUser = async (emailValue) => await repositorie.findOne(emailValue);
 
 const getOneUser = async () => await repositorie.getOne();
 

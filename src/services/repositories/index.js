@@ -1,9 +1,9 @@
 const { body } = require('express-validator');
 const {User} = require('../../models');
 
-const findOne = async (body) => await User.find({
+const findOne = async (emailValue) => await User.findOne({
     where: {
-        email: body.email
+        email: emailValue
     }
 });
 
